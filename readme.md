@@ -55,7 +55,7 @@ More info at: [SageMaker XGboost documentation](https://docs.aws.amazon.com/sage
 - [XGboost Regression on Abalone dataset](1-intro-sagemaker-algos/regression/xgboost_regression_abalone.ipynb)
 
 
-### 1.4 NLP - Topics extraction (LDA)
+### 1.4.a NLP - Topics modeling (LDA)
 #### Overview
 The Amazon Sagemaker **LDA** (Latent Dirichlet Allocation) algorithm is an **unsupervised learning** algorithm that attempts to describe a set of observations as a mixture of distinct **categories**.
 
@@ -67,9 +67,20 @@ LDA supports both **recordIO-wrapped-protobuf** (dense and sparse) and **CSV** f
 More info at: [SageMaker LDA documentation](https://docs.aws.amazon.com/sagemaker/latest/dg/lda.html)
 
 #### Notebooks
-- [LDA Topic modeling on synthetic dataset](1-intro-sagemaker-algos/nlp/LDA-Introduction.ipynb) - this notebook is still WIS as the synthetic data generation is failing.
+- [LDA Topic modeling on synthetic dataset](1-intro-sagemaker-algos/nlp/lda-topic-modeling-synthetic.ipynb) - this notebook is still WIS as the synthetic data generation is failing.
 
 
+### 1.4.b NLP - Topics modeling (NTM)
+#### Overview
+The Amazon Sagemaker **NTM** (Neural Topic Model) is an **unsupervised learning** algorithm that is used to organize a corpus of documents into *topics* that contain word groupings based on their statistical distribution.
+
+Documents that contain frequent occurrences of words such as "bike", "car", "train", "mileage", and "speed" are likely to share a topic on "transportation" for example. Topic modeling can be used to classify or summarize documents based on the topics detected or to retrieve information or recommend content based on topic similarities. The topics from documents that NTM learns are characterized as a latent representation because the topics are inferred from the observed word distributions in the corpus. The semantics of topics are usually inferred by examining the top ranking words they contain. Because the method is unsupervised, only the number of topics, not the topics themselves, are prespecified. In addition, the topics are not guaranteed to align with how a human might naturally categorize documents.
+
+
+More info at: [SageMaker NTM documentation](https://docs.aws.amazon.com/sagemaker/latest/dg/ntm.html)
+
+#### Notebooks
+- [NTM Topic modeling on synthetic dataset](1-intro-sagemaker-algos/nlp/ntm-topic-modeling-synthetic.ipynb) - this notebook is still WIS as the synthetic data generation is failing.
 
 
 ### 2. Resources
