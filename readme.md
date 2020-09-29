@@ -55,6 +55,22 @@ More info at: [SageMaker XGboost documentation](https://docs.aws.amazon.com/sage
 - [XGboost Regression on Abalone dataset](1-intro-sagemaker-algos/regression/xgboost_regression_abalone.ipynb)
 
 
+### 1.4 NLP - Topics extraction (LDA)
+#### Overview
+The Amazon Sagemaker **LDA** (Latent Dirichlet Allocation) algorithm is an **unsupervised learning** algorithm that attempts to describe a set of observations as a mixture of distinct **categories**.
+
+LDA is most commonly used to perform "topic modeling" and discover a user-specified number of **topics shared by documents within a text corpus**. Here each observation is a document, the features are the presence (or occurrence count) of each word, and the categories are the topics. Since the method is unsupervised, the **topics are not specified up front, and are not guaranteed to align with how a human may naturally categorize documents**. The topics are learned as a probability distribution over the words that occur in each document. Each document, in turn, is described as a mixture of topics.
+
+
+LDA supports both **recordIO-wrapped-protobuf** (dense and sparse) and **CSV** file formats. LDA currently only supports single-instance CPU training. CPU instances are recommended for hosting/inference.
+
+More info at: [SageMaker LDA documentation](https://docs.aws.amazon.com/sagemaker/latest/dg/lda.html)
+
+#### Notebooks
+- [LDA Topic modeling on synthetic dataset](1-intro-sagemaker-algos/nlp/LDA-Introduction.ipynb) - this notebook is still WIS as the synthetic data generation is failing.
+
+
+
 
 ### 2. Resources
 - [amazon-sagemaker-examples](https://github.com/awslabs/amazon-sagemaker-examples)
