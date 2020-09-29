@@ -82,6 +82,26 @@ More info at: [SageMaker NTM documentation](https://docs.aws.amazon.com/sagemake
 #### Notebooks
 - [NTM Topic modeling on synthetic dataset](1-intro-sagemaker-algos/nlp/ntm-topic-modeling-synthetic.ipynb) - this notebook is still WIS as the synthetic data generation is failing.
 
+### 1.4.c NLP - Text classification modeling (BlazingText)
+#### Overview
+The Amazon SageMaker **BlazingText** algorithm provides highly optimized implementations of the **Word2vec and text classification** algorithms.
+
+Word2vec generally is an **unsupervised learning** algorithm, designed by Google developers and released in 2013, to learn vector representations of words. The main idea is to encode words with close meaning that can substitute each other in a context as close vectors in an X-dimensional space.
+
+The Word2vec algorithm is **useful for many downstream natural language processing (NLP) tasks, such as sentiment analysis, named entity recognition, machine translation, etc.** Text classification is an important task for applications that perform web searches, information retrieval, ranking, and document classification.
+
+The Word2vec algorithm **maps words to high-quality distributed vectors**. The resulting vector representation of a word is called a **word embedding**. Words that are semantically similar correspond to vectors that are close together. That way, word embeddings capture the semantic relationships between words.
+
+How Word2Vec works?
+The algorithm tries to reflect the meaning of a word by analyzing its context. The algorithm exists in two flavors: CBOW and Skip-Gram. In the second approach, looping over a corpus of sentences, model tries to use the current word to predict its neighbors, or in CBOW it tries to predict the current word with the help of each of the contexts.
+
+With the **BlazingText** algorithm, you can scale to large datasets easily. Similar to Word2vec, it provides the Skip-gram and continuous bag-of-words (CBOW) training architectures. BlazingText's implementation of the supervised multi-class, multi-label text classification algorithm extends the fastText text classifier to **use GPU acceleration with custom CUDA kernels**. You can train a model on more than a billion words in a couple of minutes using a multi-core CPU or a GPU.
+
+
+More info at: [SageMaker BlazingText documentation](https://docs.aws.amazon.com/sagemaker/latest/dg/blazingtext.html)
+
+#### Notebooks
+ - - [BlazingText on dbpedia](1-intro-sagemaker-algos/nlp/blazingtext-classification-dbpedia.ipynb)
 
 ### 2. Resources
 - [amazon-sagemaker-examples](https://github.com/awslabs/amazon-sagemaker-examples)
