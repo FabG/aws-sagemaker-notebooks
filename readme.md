@@ -101,7 +101,9 @@ With the **BlazingText** algorithm, you can scale to large datasets easily. Simi
 More info at: [SageMaker BlazingText documentation](https://docs.aws.amazon.com/sagemaker/latest/dg/blazingtext.html)
 
 #### Notebooks
- - - [BlazingText on dbpedia](1-intro-sagemaker-algos/nlp/blazingtext-classification-dbpedia.ipynb)
+ - [BlazingText Topic Extraction on dbpedia](1-intro-sagemaker-algos/nlp/blazingtext-classification-dbpedia.ipynb)
+ - [BlazingText Pretrained Language Identification](1-intro-sagemaker-algos/nlp/blazingtext-pretrained-language-identification.ipynb)
+
 
 ### 2. Resources
 - [amazon-sagemaker-examples](https://github.com/awslabs/amazon-sagemaker-examples)
