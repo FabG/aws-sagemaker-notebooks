@@ -100,11 +100,31 @@ With the **BlazingText** algorithm, you can scale to large datasets easily. Simi
 
 More info at: [SageMaker BlazingText documentation](https://docs.aws.amazon.com/sagemaker/latest/dg/blazingtext.html)
 
+
 #### Notebooks
  - [BlazingText Topic Extraction on dbpedia](1-intro-sagemaker-algos/nlp/blazingtext-classification-dbpedia.ipynb)
  - [BlazingText Pretrained Language Identification](1-intro-sagemaker-algos/nlp/blazingtext-pretrained-language-identification.ipynb)
  - [Blazing Test subwords on Text8](1-intro-sagemaker-algos/nlp/blazingtext-word2vec-subwords-text8.ipynb)
 
+
+
+### 1.5 Classification/Regression on high dimension sparse dataset (Factorization Machines)
+#### Overview
+A **factorization machine** is a general-purpose **supervised learning** algorithm that you can use for both classification and regression tasks.
+
+It is an extension of a linear model that is designed to capture interactions between features within high dimensional sparse datasets economically. For example, in a click prediction system, the factorization machine model can capture click rate patterns observed when ads from a certain ad-category are placed on pages from a certain page-category.
+
+Factorization machines are a good choice for tasks dealing with **high dimensional sparse datasets**, such as **click prediction and item recommendation**.
+
+
+
+More info at: [SageMaker Factorization Machines documentation](https://docs.aws.amazon.com/sagemaker/latest/dg/fact-machines.html)
+
+
+#### Notebooks
+ - [Factorization Machine on MNIST](1-intro-sagemaker-algos/high_dimensional_sparse_datasets/factorization-machines-mnist.ipynb)
+
+ 
 
 ### 2. Resources
 - [amazon-sagemaker-examples](https://github.com/awslabs/amazon-sagemaker-examples)
