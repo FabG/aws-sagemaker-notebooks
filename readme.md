@@ -124,7 +124,23 @@ More info at: [SageMaker Factorization Machines documentation](https://docs.aws.
 #### Notebooks
  - [Factorization Machine on MNIST](1-intro-sagemaker-algos/high_dimensional_sparse_datasets/factorization-machines-mnist.ipynb)
 
- 
+
+### 1.6 Image Multi-Label classification (Image Classification)
+#### Overview
+The Amazon SageMaker **Image Classification** algorithm is a **supervised learning** algorithm that supports **multi-label classification**.
+
+It takes an image as input and outputs one or more labels assigned to that image. It uses a **convolutional neural network (ResNet)** that can be:
+ - trained from scratch
+ - or trained using transfer learning when a large number of training images are not available.
+The recommended input format for the Amazon SageMaker image classification algorithms is Apache MXNet `RecordIO`. However, you can also use raw images in `.jpg` or `.png` format.
+
+
+More info at: [SageMaker Image Classification documentation](https://docs.aws.amazon.com/sagemaker/latest/dg/image-classification.html)
+
+
+#### Notebooks
+  - [Image Classification on caltech-256](1-intro-sagemaker-algos/image_classification/image-classification-fulltraining-highlevel.ipynb) - still WIS as I did not get the ml.p2.xlarge instance enabled for training
+
 
 ### 2. Resources
 - [amazon-sagemaker-examples](https://github.com/awslabs/amazon-sagemaker-examples)
