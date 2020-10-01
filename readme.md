@@ -103,6 +103,7 @@ More info at: [SageMaker BlazingText documentation](https://docs.aws.amazon.com/
 #### Notebooks
  - [BlazingText Topic Extraction on dbpedia](1-intro-sagemaker-algos/nlp/blazingtext-classification-dbpedia.ipynb)
  - [BlazingText Pretrained Language Identification](1-intro-sagemaker-algos/nlp/blazingtext-pretrained-language-identification.ipynb)
+ - [Blazing Test subwords on Text8](1-intro-sagemaker-algos/nlp/blazingtext-word2vec-subwords-text8.ipynb)
 
 
 ### 2. Resources
