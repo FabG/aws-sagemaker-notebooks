@@ -142,5 +142,23 @@ More info at: [SageMaker Image Classification documentation](https://docs.aws.am
   - [Image Classification on caltech-256](1-intro-sagemaker-algos/image_classification/image-classification-fulltraining-highlevel.ipynb) - still WIS as I did not get the ml.p2.xlarge instance enabled for training
 
 
+### 1.7 Anomaly Detection on IP Addresses (IP Insights)
+#### Overview
+
+Amazon SageMaker **IP Insights** is an **unsupervised learning** algorithm that learns the **usage patterns for IPv4 addresses**.
+
+It is designed to capture associations between IPv4 addresses and various entities, such as user IDs, hostnames or account numbers. You can use it to identify a user attempting to log into a web service from an anomalous IP address, for example. Or you can use it to identify an account that is attempting to create computing resources from an unusual IP address.
+
+Under the hood, it learns **vector representations for online resources and IP addresses**. This essentially means that if the vector representing an IP address and an online resource are close together, then it is likely for that IP address to access that online resource, even if it has never accessed it before.
+
+
+
+More info at: [SageMaker IP Insights documentation](https://docs.aws.amazon.com/sagemaker/latest/dg/ip-insights.html)
+
+
+#### Notebooks
+  - [IP Insights on Apache Web Logs](1-intro-sagemaker-algos/ip_insights/ipinsights-weblogs.ipynb) - still WIS as I did not get the ml.p3.2xlarge instance enabled for training
+
+
 ### 2. Resources
 - [amazon-sagemaker-examples](https://github.com/awslabs/amazon-sagemaker-examples)
