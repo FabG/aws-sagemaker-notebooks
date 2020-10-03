@@ -139,7 +139,7 @@ More info at: [SageMaker Image Classification documentation](https://docs.aws.am
 
 
 #### Notebooks
-  - [Image Classification on caltech-256](1-intro-sagemaker-algos/image_classification/image-classification-fulltraining-highlevel.ipynb) - still WIS as I did not get the ml.p2.xlarge instance enabled for training
+  - [Image Classification on caltech-256](1-intro-sagemaker-algos/image_classification/image-classification-fulltraining-highlevel.ipynb) - This notebook leverages [SageMaker Neo](https://aws.amazon.com/sagemaker/neo/) to run twice as fast and reduce memory footprint, but has a compilation error. The training job finished though so it's more an error with the Neo compilation.
 
 
 ### 1.7 Anomaly Detection on IP Addresses (IP Insights)
