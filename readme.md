@@ -157,7 +157,10 @@ More info at: [SageMaker IP Insights documentation](https://docs.aws.amazon.com/
 
 
 #### Notebooks
-  - [IP Insights on Apache Web Logs](1-intro-sagemaker-algos/ip_insights/ipinsights-weblogs.ipynb) - still WIS as I did not get the ml.p3.2xlarge instance enabled for training
+  - [IP Insights on Apache Web Logs](1-intro-sagemaker-algos/ip_insights/ipinsights-weblogs.ipynb)
+  This notebook, in addition to training and hosting the mode as an endpoint, also includes the:
+    - [Amazon Automatic Model Tuning](https://docs.aws.amazon.com/sagemaker/latest/dg/automatic-model-tuning.html) to pick the appropriate hyperparameters.
+    - [Amazon Batch Transform](https://docs.aws.amazon.com/sagemaker/latest/dg/how-it-works-batch.html) to get inferences on an entire dataset in S3
 
 
 ### 2. Resources
