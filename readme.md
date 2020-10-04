@@ -142,7 +142,7 @@ More info at: [SageMaker Image Classification documentation](https://docs.aws.am
   - [Image Classification on caltech-256](1-intro-sagemaker-algos/image_classification/image-classification-fulltraining-highlevel.ipynb) - This notebook leverages [SageMaker Neo](https://aws.amazon.com/sagemaker/neo/) to run twice as fast and reduce memory footprint, but has a compilation error. The training job finished though so it's more an error with the Neo compilation.
 
  - [Image Classification on caltech-256 (2)](1-intro-sagemaker-algos/image_classification/Image-classification-fulltraining.ipynb) - This notebook trains MXNet on caltech256 images and expose an endpoint for real tiem inferences
- 
+
 
 ### 1.7 Anomaly Detection on IP Addresses (IP Insights)
 #### Overview
@@ -163,6 +163,21 @@ More info at: [SageMaker IP Insights documentation](https://docs.aws.amazon.com/
   This notebook, in addition to training and hosting the mode as an endpoint, also includes the:
     - [Amazon Automatic Model Tuning](https://docs.aws.amazon.com/sagemaker/latest/dg/automatic-model-tuning.html) to pick the appropriate hyperparameters.
     - [Amazon Batch Transform](https://docs.aws.amazon.com/sagemaker/latest/dg/how-it-works-batch.html) to get inferences on an entire dataset in S3
+
+
+### 1.8 Clustering (K-Means)
+#### Overview
+
+Amazon SageMaker **K-Means** is an **unsupervised learning** algorithm that can be used for clustering. It attempts to find **discrete groupings** within data, where members of a group are as similar as possible to one another and as different as possible from members of other groups. You define the attributes that you want the algorithm to use to determine similarity.
+
+Amazon SageMaker uses a modified version of the web-scale k-means clustering algorithm. Compared with the original version of the algorithm, the version used by Amazon SageMaker is more accurate. Like the original algorithm, it scales to massive datasets and delivers improvements in training time. To do this, the version used by Amazon SageMaker streams mini-batches (small, random subsets) of the training data.
+
+
+More info at: [SageMaker K-Means documentation](https://docs.aws.amazon.com/sagemaker/latest/dg/k-means.html)
+
+
+#### Notebooks
+  - [K-Means on Census data](1-intro-sagemaker-algos/clustering/k-means-countycensus.ipynb) - This notebooks leverages PCA before using K-Means to 
 
 
 ### 2. Resources
