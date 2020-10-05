@@ -108,7 +108,7 @@ More info at: [SageMaker BlazingText documentation](https://docs.aws.amazon.com/
 
 
 
-### 1.5 Classification/Regression on high dimension sparse dataset (Factorization Machines)
+### 1.5a Classification/Regression on high dimension sparse dataset (Factorization Machines)
 #### Overview
 A **factorization machine** is a general-purpose **supervised learning** algorithm that you can use for both classification and regression tasks.
 
@@ -117,12 +117,28 @@ It is an extension of a linear model that is designed to capture interactions be
 Factorization machines are a good choice for tasks dealing with **high dimensional sparse datasets**, such as **click prediction and item recommendation**.
 
 
-
 More info at: [SageMaker Factorization Machines documentation](https://docs.aws.amazon.com/sagemaker/latest/dg/fact-machines.html)
 
 
 #### Notebooks
- - [Factorization Machine on MNIST](1-intro-sagemaker-algos/high_dimensional_sparse_datasets/factorization-machines-mnist.ipynb)
+ - [Factorization Machine on MNIST](1-intro-sagemaker-algos/classification_regression/factorization-machines-mnist.ipynb)
+
+
+### 1.5b Classification/Regression (K-means)
+#### Overview
+Amazon SageMaker **k-nearest neighbors (k-NN)** algorithm is an **index-based** algorithm. It uses a non-parametric method for **classification or regression**.
+
+- For **classification** problems, the algorithm queries the k points that are closest to the sample point and returns the most frequently used label of their class as the predicted label.
+- For **regression** problems, the algorithm queries the k closest points to the sample point and returns the average of their feature values as the predicted value.
+
+Training with the k-NN algorithm has three steps: sampling, dimension reduction, and index building. The main objective of k-NN's training is to construct the index. The index enables efficient lookups of distances between points whose values or class labels have not yet been determined and the k nearest points to use for inference.
+
+More info at: [SageMaker K-NN documentation](https://docs.aws.amazon.com/sagemaker/latest/dg/k-nearest-neighbors.html)
+
+
+#### Notebooks
+ - [K-NN)](1-intro-sagemaker-algos/classification_regression/k_nearest_neighbors_covtype.ipynb) - Notebook showcasing Multi-Class Classification, with a goal to predict the forest coverage type given a location
+
 
 
 ### 1.6 Image Multi-Label classification (Image Classification)
@@ -177,7 +193,10 @@ More info at: [SageMaker K-Means documentation](https://docs.aws.amazon.com/sage
 
 
 #### Notebooks
-  - [K-Means on Census data](1-intro-sagemaker-algos/clustering/k-means-countycensus.ipynb) - This notebooks leverages PCA before using K-Means to 
+  - [K-Means on Census data](1-intro-sagemaker-algos/clustering/k-means-countycensus.ipynb) - This notebooks leverages PCA before using K-Means to
+
+
+
 
 
 ### 2. Resources
