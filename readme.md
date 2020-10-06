@@ -141,6 +141,31 @@ More info at: [SageMaker K-NN documentation](https://docs.aws.amazon.com/sagemak
 
 
 
+### 1.5c Classification/Regression (Linear Learner)
+#### Overview
+Amazon SageMaker **Linear Learner** is an **supervised learning** algorithm. For input, you give the model labeled examples (x, y). x is a high-dimensional vector and y is a numeric label.
+ - For binary classification problems, the label must be either 0 or 1.
+ - For multiclass classification problems, the labels must be from 0 to `num_classes - 1`.
+ - For regression problems, y is a real number.
+
+ The algorithm learns a linear function, or, for classification problems, a linear threshold function, and maps a vector x to an approximation of the label y.
+
+The Amazon SageMaker linear learner algorithm provides a solution for both **classification and regression** problems. With the SageMaker algorithm, you can simultaneously explore different training objectives and choose the best solution from a validation set. You can also explore a large number of models and choose the best. The best model optimizes either of the following:
+- Continuous objectives, such as mean square error, cross entropy loss, absolute error.
+- Discrete objectives suited for classification, such as F1 measure, precision, recall, or accuracy.
+
+Compared with methods that provide a solution for only continuous objectives, the SageMaker linear learner algorithm provides a significant increase in speed over naive hyperparameter optimization techniques. It is also more convenient.
+Amazon SageMaker's Linear Learner algorithm extends upon typical linear models by training many models in parallel, in a computationally efficient manner. Each model has a different set of hyperparameters, and then the algorithm finds the set that optimizes a specific criteria. This can provide substantially more accurate models than typical linear algorithms at the same, or lower, cost.
+
+
+More info at: [SageMaker Linear Learner documentation](https://docs.aws.amazon.com/sagemaker/latest/dg/linear-learner.html)
+
+
+#### Notebooks
+  - [Linear Learner with MNIST](1-intro-sagemaker-algos/classification_regression/linear-learner-mnist.ipynb) - This notebook will leverage Linear Learner to perform a binary classification (if a hand digit number is a 0)
+
+
+
 ### 1.6 Image Multi-Label classification (Image Classification)
 #### Overview
 The Amazon SageMaker **Image Classification** algorithm is a **supervised learning** algorithm that supports **multi-label classification**.
