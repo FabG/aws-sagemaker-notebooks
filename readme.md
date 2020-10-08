@@ -231,13 +231,26 @@ The embeddings are learned in a way that preserves the semantics of the relation
 
 Object2Vec generalizes the well-known Word2Vec embedding technique for words that is optimized in the SageMaker BlazingText algorithm.
 
-  More info at: [SageMaker Object2Vec documentation](https://docs.aws.amazon.com/sagemaker/latest/dg/object2vec.html)
-
-
+More info at: [SageMaker Object2Vec documentation](https://docs.aws.amazon.com/sagemaker/latest/dg/object2vec.html)
 
 
 #### Notebooks
-  - [K-Means on Census data](1-intro-sagemaker-algos/object2vec/object2vec-movie-recommendation-movielens100k.ipynb) - This notebooks learns embeddings from User-Movie pairs
+  - [Object2Vec on Movie](1-intro-sagemaker-algos/object2vec/object2vec-movie-recommendation-movielens100k.ipynb) - This notebooks learns embeddings from User-Movie pairs
+
+
+### 1.10 (Object Detection)
+#### Overview
+The Amazon SageMaker **Object Detection** algorithm **detects and classifies objects in images** using a single deep neural network. It is a **supervised learning** algorithm that takes images as input and identifies all instances of objects within the image scene.
+
+The object is categorized into one of the classes in a specified collection with a confidence score that it belongs to the class. Its location and scale in the image are indicated by a rectangular bounding box. It uses the Single Shot multibox Detector (SSD) framework and supports two base networks: VGG and ResNet. The network can be trained from scratch, or trained with models that have been pre-trained on the ImageNet dataset.
+
+More info at: [SageMaker Object Detection documentation](https://docs.aws.amazon.com/sagemaker/latest/dg/object-detection.html)
+
+
+#### Notebooks
+  - [Object Detection on Birds](1-intro-sagemaker-algos/object_detection/object_detection_birds.ipynb)
+
+
 
 
 ### 2. Resources
