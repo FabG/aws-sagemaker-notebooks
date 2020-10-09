@@ -238,7 +238,7 @@ More info at: [SageMaker Object2Vec documentation](https://docs.aws.amazon.com/s
   - [Object2Vec on Movie](1-intro-sagemaker-algos/object2vec/object2vec-movie-recommendation-movielens100k.ipynb) - This notebooks learns embeddings from User-Movie pairs
 
 
-### 1.10 (Object Detection)
+### 1.10 Object recognition in Images (Object Detection)
 #### Overview
 The Amazon SageMaker **Object Detection** algorithm **detects and classifies objects in images** using a single deep neural network. It is a **supervised learning** algorithm that takes images as input and identifies all instances of objects within the image scene.
 
@@ -248,8 +248,24 @@ More info at: [SageMaker Object Detection documentation](https://docs.aws.amazon
 
 
 #### Notebooks
-  - [Object Detection on Birds](1-intro-sagemaker-algos/object_detection/object_detection_birds.ipynb)
+ - [Object Detection on Birds](1-intro-sagemaker-algos/object_detection/object_detection_birds.ipynb)
 
+
+### 1.11 Anomaly Detection (Random Cut Forest)
+#### Overview
+The Amazon SageMaker **Random Cut Forest (RCF)**  is an **unsupervised algorithm** for **detecting anomalous data points** within a data set. These are observations which diverge from otherwise well-structured or patterned data.
+
+Anomalies can manifest as unexpected spikes in time series data, breaks in periodicity, or unclassifiable data points. They are easy to describe in that, when viewed in a plot, they are often easily distinguishable from the "regular" data. Including these anomalies in a data set can drastically increase the complexity of a machine learning task since the "regular" data can often be described with a simple model.
+
+With each data point, RCF associates an `anomaly score`.
+ - **Low score values** indicate that the data point is considered **"normal."**
+ - **High values** indicate the presence of an **anomaly** in the data. The definitions of "low" and "high" depend on the application but **common practice suggests that scores beyond three standard deviations from the mean score are considered anomalous**.
+
+More info at: [SageMaker Random Cut Forest documentation](https://docs.aws.amazon.com/sagemaker/latest/dg/randomcutforest.html)
+
+
+#### Notebooks
+    - [Anomaly detection (RCF) on NYC Taxi dataset](1-intro-sagemaker-algos/random_cut_forest/random_cut_forest.ipynb)
 
 
 
