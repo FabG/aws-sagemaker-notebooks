@@ -166,7 +166,7 @@ More info at: [SageMaker Linear Learner documentation](https://docs.aws.amazon.c
 
 
 
-### 1.6 Image Multi-Label classification (Image Classification)
+### 1.6a Whole Image Multi-Label classification (Image Classification)
 #### Overview
 The Amazon SageMaker **Image Classification** algorithm is a **supervised learning** algorithm that supports **multi-label classification**.
 
@@ -182,7 +182,38 @@ More info at: [SageMaker Image Classification documentation](https://docs.aws.am
 #### Notebooks
   - [Image Classification on caltech-256](1-intro-sagemaker-algos/image_classification/image-classification-fulltraining-highlevel.ipynb) - This notebook leverages [SageMaker Neo](https://aws.amazon.com/sagemaker/neo/) to run twice as fast and reduce memory footprint, but has a compilation error. The training job finished though so it's more an error with the Neo compilation.
 
- - [Image Classification on caltech-256 (2)](1-intro-sagemaker-algos/image_classification/Image-classification-fulltraining.ipynb) - This notebook trains MXNet on caltech256 images and expose an endpoint for real tiem inferences
+ - [Image Classification on caltech-256 (2)](1-intro-sagemaker-algos/images/image_classification/image_classification/Image-classification-fulltraining.ipynb) - This notebook trains MXNet on caltech256 images and expose an endpoint for real tiem inferences
+
+
+### 1.6b Object recognition in Images (Object Detection)
+#### Overview
+The Amazon SageMaker **Object Detection** algorithm **detects and classifies objects in images** using a single deep neural network. It is a **supervised learning** algorithm that takes images as input and identifies all instances of objects within the image scene.
+
+The object is categorized into one of the classes in a specified collection with a confidence score that it belongs to the class. Its location and scale in the image are indicated by a rectangular bounding box. It uses the Single Shot multibox Detector (SSD) framework and supports two base networks: VGG and ResNet. The network can be trained from scratch, or trained with models that have been pre-trained on the ImageNet dataset.
+
+More info at: [SageMaker Object Detection documentation](https://docs.aws.amazon.com/sagemaker/latest/dg/object-detection.html)
+
+#### Notebooks
+ - [Object Detection on Birds](1-intro-sagemaker-algos/object_detection/images/object_detection/object_detection_birds.ipynb)
+
+
+### 1.6c Image's Pixels classification (Semantic Segmentation)
+#### Overview
+The SageMaker **semantic segmentation** algorithm provides a fine-grained, pixel-level approach to developing computer vision applications. It **tags every pixel in an image with a class label from a predefined set of classes**.
+The output is an integer matrix (or a grayscale image) with the same shape as the input image. This output image is also called a segmentation mask.
+
+Tagging is fundamental for understanding scenes, which is critical to an increasing number of computer vision applications, such as self-driving vehicles, medical imaging diagnostics, and robot sensing.
+
+For comparison:
+ - the SageMaker *Image Classification* Algorithm is a supervised learning algorithm that analyzes only whole images, classifying them into one of multiple output categories.
+ - the *Object Detection* Algorithm is a supervised learning algorithm that detects and classifies all instances of an object in an image. It indicates the location and scale of each object in the image with a rectangular bounding box.
+
+Because the semantic segmentation algorithm classifies every pixel in an image, it also provides information about the shapes of the objects contained in the image. The segmentation output is represented as a grayscale image, called a segmentation mask. A segmentation mask is a grayscale image with the same shape as the input image.
+
+More info at: [SageMaker Semantic Segmentation documentation](https://docs.aws.amazon.com/sagemaker/latest/dg/semantic-segmentation.html)
+
+#### Notebooks
+ - [Object Detection on Birds](1-intro-sagemaker-algos/semantic-segmentation/images/semantic_segmentation/semantic-segmentation-pascalvoc.ipynb) - training a fully-convolutional network (FCN) on the Pascal VOC dataset. Need to try it again as the Pasval VOC website is down for downloading the training data...
 
 
 ### 1.7 Anomaly Detection on IP Addresses (IP Insights)
@@ -238,20 +269,10 @@ More info at: [SageMaker Object2Vec documentation](https://docs.aws.amazon.com/s
   - [Object2Vec on Movie](1-intro-sagemaker-algos/object2vec/object2vec-movie-recommendation-movielens100k.ipynb) - This notebooks learns embeddings from User-Movie pairs
 
 
-### 1.10 Object recognition in Images (Object Detection)
-#### Overview
-The Amazon SageMaker **Object Detection** algorithm **detects and classifies objects in images** using a single deep neural network. It is a **supervised learning** algorithm that takes images as input and identifies all instances of objects within the image scene.
-
-The object is categorized into one of the classes in a specified collection with a confidence score that it belongs to the class. Its location and scale in the image are indicated by a rectangular bounding box. It uses the Single Shot multibox Detector (SSD) framework and supports two base networks: VGG and ResNet. The network can be trained from scratch, or trained with models that have been pre-trained on the ImageNet dataset.
-
-More info at: [SageMaker Object Detection documentation](https://docs.aws.amazon.com/sagemaker/latest/dg/object-detection.html)
 
 
-#### Notebooks
- - [Object Detection on Birds](1-intro-sagemaker-algos/object_detection/object_detection_birds.ipynb)
 
-
-### 1.11 Anomaly Detection (Random Cut Forest)
+### 1.10 Anomaly Detection (Random Cut Forest)
 #### Overview
 The Amazon SageMaker **Random Cut Forest (RCF)**  is an **unsupervised algorithm** for **detecting anomalous data points** within a data set. These are observations which diverge from otherwise well-structured or patterned data.
 
@@ -266,6 +287,7 @@ More info at: [SageMaker Random Cut Forest documentation](https://docs.aws.amazo
 
 #### Notebooks
     - [Anomaly detection (RCF) on NYC Taxi dataset](1-intro-sagemaker-algos/random_cut_forest/random_cut_forest.ipynb)
+
 
 
 
