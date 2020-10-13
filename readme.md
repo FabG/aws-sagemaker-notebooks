@@ -216,7 +216,24 @@ More info at: [SageMaker Semantic Segmentation documentation](https://docs.aws.a
  - [Object Detection on Birds](1-intro-sagemaker-algos/semantic-segmentation/images/semantic_segmentation/semantic-segmentation-pascalvoc.ipynb) - training a fully-convolutional network (FCN) on the Pascal VOC dataset. Need to try it again as the Pasval VOC website is down for downloading the training data...
 
 
-### 1.7 Anomaly Detection on IP Addresses (IP Insights)
+### 1.7a Anomaly Detection (Random Cut Forest)
+#### Overview
+The Amazon SageMaker **Random Cut Forest (RCF)**  is an **unsupervised algorithm** for **detecting anomalous data points** within a data set. These are observations which diverge from otherwise well-structured or patterned data.
+
+Anomalies can manifest as unexpected spikes in time series data, breaks in periodicity, or unclassifiable data points. They are easy to describe in that, when viewed in a plot, they are often easily distinguishable from the "regular" data. Including these anomalies in a data set can drastically increase the complexity of a machine learning task since the "regular" data can often be described with a simple model.
+
+With each data point, RCF associates an `anomaly score`.
+- **Low score values** indicate that the data point is considered **"normal."**
+- **High values** indicate the presence of an **anomaly** in the data. The definitions of "low" and "high" depend on the application but **common practice suggests that scores beyond three standard deviations from the mean score are considered anomalous**.
+
+More info at: [SageMaker Random Cut Forest documentation](https://docs.aws.amazon.com/sagemaker/latest/dg/randomcutforest.html)
+
+
+#### Notebooks
+ - [Anomaly detection (RCF) on NYC Taxi dataset](1-intro-sagemaker-algos/random_cut_forest/random_cut_forest.ipynb)
+
+
+### 1.7b Anomaly Detection on IP Addresses (IP Insights)
 #### Overview
 
 Amazon SageMaker **IP Insights** is an **unsupervised learning** algorithm that learns the **usage patterns for IPv4 addresses**.
@@ -269,24 +286,26 @@ More info at: [SageMaker Object2Vec documentation](https://docs.aws.amazon.com/s
   - [Object2Vec on Movie](1-intro-sagemaker-algos/object2vec/object2vec-movie-recommendation-movielens100k.ipynb) - This notebooks learns embeddings from User-Movie pairs
 
 
-
-
-
-### 1.10 Anomaly Detection (Random Cut Forest)
+### 1.10 Object Tokenization (Sequence-to-Sequence)
 #### Overview
-The Amazon SageMaker **Random Cut Forest (RCF)**  is an **unsupervised algorithm** for **detecting anomalous data points** within a data set. These are observations which diverge from otherwise well-structured or patterned data.
 
-Anomalies can manifest as unexpected spikes in time series data, breaks in periodicity, or unclassifiable data points. They are easy to describe in that, when viewed in a plot, they are often easily distinguishable from the "regular" data. Including these anomalies in a data set can drastically increase the complexity of a machine learning task since the "regular" data can often be described with a simple model.
+Amazon SageMaker **Sequence to Sequence** is a **supervised learning** algorithm where:
+- the **input** is a **sequence of tokens** (for example, text, audio)
+- the **output** generated is **another sequence of tokens**.
 
-With each data point, RCF associates an `anomaly score`.
- - **Low score values** indicate that the data point is considered **"normal."**
- - **High values** indicate the presence of an **anomaly** in the data. The definitions of "low" and "high" depend on the application but **common practice suggests that scores beyond three standard deviations from the mean score are considered anomalous**.
+Example applications include:
+ - *machine translation* (input a sentence from one language and predict what that sentence would be in another language)
+ - *text summarization* (input a longer string of words and predict a shorter string of words that is a summary)
+ - *speech-to-text* (audio clips converted into output sentences in tokens).
 
-More info at: [SageMaker Random Cut Forest documentation](https://docs.aws.amazon.com/sagemaker/latest/dg/randomcutforest.html)
+Recently, problems in this domain have been successfully modeled with deep neural networks that show a significant performance boost over previous methodologies. Amazon SageMaker **seq2seq** uses **Recurrent Neural Networks (RNNs) and Convolutional Neural Network (CNN)** models with attention as encoder-decoder architectures.
+
+
+More info at: [SageMaker Seq2seq documentation](https://docs.aws.amazon.com/sagemaker/latest/dg/seq-2-seq.html)
 
 
 #### Notebooks
-    - [Anomaly detection (RCF) on NYC Taxi dataset](1-intro-sagemaker-algos/random_cut_forest/random_cut_forest.ipynb)
+ - [Seq2Seq for English-German translation](1-intro-sagemaker-algos/seq2seq/seq2seq-translation-english-german.ipynb)
 
 
 
