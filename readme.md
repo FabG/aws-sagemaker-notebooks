@@ -339,6 +339,8 @@ The purpose here is to use this data set to build a predictive model of whether 
 
 As a reminder, Amazon SageMaker's **Linear Learner actually fits many models in parallel**, each with slightly different hyperparameters, and then returns the one with the best fit. This functionality is automatically enabled.
 
+#### 2.2 Traffic Violation Predictions (DeepAR)
+This [traffic violation prediction notebook](2-intro-sagemaker-applied-ml/deepar-chicago-traffic-violations.ipynb) demonstrates **time series forecasting** using the Amazon SageMaker **DeepAR** algorithm by analyzing city of [Chicago’s Speed Camera Violation dataset](https://data.cityofchicago.org/Transportation/Red-Light-Camera-Violations/spqx-js37). 
 
 ### 3. Resources
 - [amazon-sagemaker-examples](https://github.com/awslabs/amazon-sagemaker-examples)
