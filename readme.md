@@ -313,6 +313,8 @@ More info at: [SageMaker Seq2seq documentation](https://docs.aws.amazon.com/sage
 **PCA** is an unsupervised machine learning algorithm that attempts to **reduce the dimensionality (number of features)** within a dataset while still retaining as much information as possible.
 This is done by finding a *new set of features called components*, which are composites of the original features that are *uncorrelated with one another*. They are also constrained so that the *first component accounts for the largest possible variability* in the data, the second component the second most variability, and so on.
 
+PCA is most commonly used as a pre-processing step. Statistically, many models assume data to be low-dimensional. In those cases, the output of PCA will actually include much less of the noise and subsequent models can be more accurate.
+
 In Amazon SageMaker, PCA operates in two modes, depending on the scenario:
 - **regular**: For datasets with *sparse* data and a moderate number of observations and features.
 - **randomized**: For datasets with both a *large number* of observations and features. This mode uses an approximation algorithm.
@@ -327,5 +329,16 @@ More info at: [SageMaker PCA documentation](https://docs.aws.amazon.com/sagemake
 - [PCA](1-intro-sagemaker-algos/dimension_reduction/seq2seq/pca-mnist.ipynb)
 
 
-### 2. Resources
+
+### 2. Intro to SageMaker Applied Machine learning
+
+#### 2.1 Breast Cancer Prediction (Linear Learner)
+
+This [cancer prediction notebook](2-intro-sagemaker-applied-ml/breast-cancer-prediction.ipynb) illustrates how one can use SageMaker's algorithms for solving applications which require **linear models** for prediction. For this illustration, we have taken an example for breast cancer prediction using [UCI'S breast cancer diagnostic data set](https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+%28Diagnostic%29).
+The purpose here is to use this data set to build a predictive model of whether a breast mass image indicates benign or malignant tumor.
+
+As a reminder, Amazon SageMaker's **Linear Learner actually fits many models in parallel**, each with slightly different hyperparameters, and then returns the one with the best fit. This functionality is automatically enabled.
+
+
+### 3. Resources
 - [amazon-sagemaker-examples](https://github.com/awslabs/amazon-sagemaker-examples)
