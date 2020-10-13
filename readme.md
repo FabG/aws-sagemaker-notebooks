@@ -308,6 +308,23 @@ More info at: [SageMaker Seq2seq documentation](https://docs.aws.amazon.com/sage
  - [Seq2Seq for English-German translation](1-intro-sagemaker-algos/seq2seq/seq2seq-translation-english-german.ipynb)
 
 
+### 1.11 Dimension reduction (PCA)
+#### Overview
+**PCA** is an unsupervised machine learning algorithm that attempts to **reduce the dimensionality (number of features)** within a dataset while still retaining as much information as possible.
+This is done by finding a *new set of features called components*, which are composites of the original features that are *uncorrelated with one another*. They are also constrained so that the *first component accounts for the largest possible variability* in the data, the second component the second most variability, and so on.
+
+In Amazon SageMaker, PCA operates in two modes, depending on the scenario:
+- **regular**: For datasets with *sparse* data and a moderate number of observations and features.
+- **randomized**: For datasets with both a *large number* of observations and features. This mode uses an approximation algorithm.
+
+PCA uses *tabular* data.
+
+
+More info at: [SageMaker PCA documentation](https://docs.aws.amazon.com/sagemaker/latest/dg/pca.html)
+
+
+#### Notebooks
+- [PCA](1-intro-sagemaker-algos/dimension_reduction/seq2seq/pca-mnist.ipynb)
 
 
 ### 2. Resources
