@@ -340,7 +340,16 @@ The purpose here is to use this data set to build a predictive model of whether 
 As a reminder, Amazon SageMaker's **Linear Learner actually fits many models in parallel**, each with slightly different hyperparameters, and then returns the one with the best fit. This functionality is automatically enabled.
 
 #### 2.2 Traffic Violation Predictions (DeepAR)
-This [traffic violation prediction notebook](2-intro-sagemaker-applied-ml/deepar-chicago-traffic-violations.ipynb) demonstrates **time series forecasting** using the Amazon SageMaker **DeepAR** algorithm by analyzing city of [Chicago’s Speed Camera Violation dataset](https://data.cityofchicago.org/Transportation/Red-Light-Camera-Violations/spqx-js37). 
+This [traffic violation prediction notebook](2-intro-sagemaker-applied-ml/deepar-chicago-traffic-violations.ipynb) demonstrates **time series forecasting** using the Amazon SageMaker **DeepAR** algorithm by analyzing city of [Chicago’s Speed Camera Violation dataset](https://data.cityofchicago.org/Transportation/Red-Light-Camera-Violations/spqx-js37).
+
+
+#### 2.3 Ensemble learner (Linear-Learner and XGBoost)
+This [income prediction ensemble notebook](2-intro-sagemaker-applied-ml/ensemble-learner-census-income.ipynb) presents an illustrative example of ensemble learner to predict if a person makes over 50K a year based on information about their education, work-experience, geneder etc.
+
+Quite often, in practical applications of Machine-Learning on predictive tasks, one model doesn't suffice. Most of the prediction competitions typically require combining forecasts from multiple sources to get an improved forecast. By combining or averaging predictions from multiple sources/models we typically get an improved forecast. This happens as there is considerable uncertainty in the choice of the model and there is no one true model in many practical applications. It is therefore beneficial to combine predictions from different models. In the Bayesian literature, this idea is referred as [Bayesian Model Averaging](http://www.stat.colostate.edu/~jah/papers/statsci.pdf) and has been shown to work much better than just picking one model.
+
+
+
 
 ### 3. Resources
 - [amazon-sagemaker-examples](https://github.com/awslabs/amazon-sagemaker-examples)
