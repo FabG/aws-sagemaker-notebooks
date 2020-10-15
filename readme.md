@@ -344,10 +344,18 @@ This [traffic violation prediction notebook](2-intro-sagemaker-applied-ml/deepar
 
 
 #### 2.3 Ensemble learner (Linear-Learner and XGBoost)
-This [income prediction ensemble notebook](2-intro-sagemaker-applied-ml/ensemble-learner-census-income.ipynb) presents an illustrative example of ensemble learner to predict if a person makes over 50K a year based on information about their education, work-experience, geneder etc.
+This [income prediction ensemble notebook](2-intro-sagemaker-applied-ml/ensemble-learner-census-income.ipynb) presents an illustrative example of ensemble learner to predict if a person makes over 50K a year based on information about their education, work-experience, gender etc.
 
 Quite often, in practical applications of Machine-Learning on predictive tasks, one model doesn't suffice. Most of the prediction competitions typically require combining forecasts from multiple sources to get an improved forecast. By combining or averaging predictions from multiple sources/models we typically get an improved forecast. This happens as there is considerable uncertainty in the choice of the model and there is no one true model in many practical applications. It is therefore beneficial to combine predictions from different models. In the Bayesian literature, this idea is referred as [Bayesian Model Averaging](http://www.stat.colostate.edu/~jah/papers/statsci.pdf) and has been shown to work much better than just picking one model.
 
+
+#### 2.4 Time series Forecast (Linear Learner)
+This [linear time series forecast notebook](2-intro-sagemaker-applied-ml/linear-time-series-forecast.ipynb) builds a linear model to forecast weekly output for US gasoline products starting in 1991 to 2005
+
+Amazon SageMaker's Linear Learner actually fits many models in parallel, each with slightly different hyperparameters, and then returns the one with the best fit. This functionality is automatically enabled. We can influence this using parameters like:
+- `num_models` to increase to total number of models run. The specified parameters will always be one of those models, but the algorithm also chooses models with nearby parameter values in order to find a solution nearby that may be more optimal. In this case, we're going to use the max of 32.
+- `loss` which controls how we penalize mistakes in our model estimates. For this case, let's use absolute loss as we haven't spent much time cleaning the data, and absolute loss will adjust less to accomodate outliers.
+- `wd` or `l1` which control regularization. Regularization can prevent model overfitting by preventing our estimates from becoming too finely tuned to the training data, which can actually hurt generalizability. In this case, we'll leave these parameters as their default "auto" though.
 
 
 
