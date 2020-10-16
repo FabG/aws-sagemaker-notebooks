@@ -364,7 +364,7 @@ NTM is most commonly used to discover a user-specified number of topics shared b
 
 In this notebook, we will use the Amazon SageMaker NTM algorithm to train a model on the [20NewsGroups](https://archive.ics.uci.edu/ml/datasets/Twenty+Newsgroups) data set. This data set has been widely used as a topic modeling benchmark.
 
-#### 2.5 Document Embeddings (Object2Vec)
+#### 2.6 Document Embeddings (Object2Vec)
 
 This [object2vec doc embeddings notebook](2-intro-sagemaker-applied-ml/object2vec-document-embedding.ipynb) showcases how to use Object2Vec to allow someone to store documents not in their raw formats or sparse bag-of-words, but instead store them as embeddings in a common low-dimensionality space,  so that the semantic distance between these documents are preserved.
 
@@ -372,6 +372,13 @@ Object2Vec is a highly customizable multi-purpose algorithm that can learn embed
 - Similarity is user-defined: users need to provide the algorithm with pairs of objects that they define as similar (1) or dissimilar (0); alternatively, the users can define similarity in a continuous sense (provide a real-valued similarity score).
 - The learned embeddings can be used to efficiently compute nearest neighbors of objects, as well as to visualize natural clusters of related objects in the embedding space. In addition, the embeddings can also be used as features of the corresponding objects in downstream supervised tasks such as classification or regression.
 
+
+#### 2.7 Video Game Hit prediction (XGboost)
+This [video game hit prediction](2-intro-sagemaker-applied-ml/video-game-sales-xgboost.ipynb) leverages XGboost to predict if a video game will be a hit or not.
+
+For this notebook, we will work with the dataset [Video Game Sales with Ratings](https://www.kaggle.com/rush4ratio/video-game-sales-with-ratings) from Kaggle. This dataset includes data from Metacritic and other sources, with attributes for user reviews as well as critic reviews, sales, ESRB ratings, among others. Both user reviews and critic reviews are in the form of ratings scores, on a scale of 0 to 10 or 0 to 100. Although this is convenient, a significant issue with the dataset is that it is relatively small.
+
+Dealing with a small dataset such as this one is a common problem in machine learning. This problem often is compounded by imbalances between the classes in the small dataset. In such situations, using an ensemble learner can be a good choice. This notebook will focus on using XGBoost, a popular ensemble learner, to build a classifier to determine whether a game will be a hit.
 
 
 ### 3. Resources
