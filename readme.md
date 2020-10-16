@@ -381,5 +381,16 @@ For this notebook, we will work with the dataset [Video Game Sales with Ratings]
 Dealing with a small dataset such as this one is a common problem in machine learning. This problem often is compounded by imbalances between the classes in the small dataset. In such situations, using an ensemble learner can be a good choice. This notebook will focus on using XGBoost, a popular ensemble learner, to build a classifier to determine whether a game will be a hit.
 
 
+#### 2.7 Predicting Mobile customer churn (XGboost)
+This [notebook]() has been adapted from this [AWS blog post] (https://aws.amazon.com/blogs/machine-learning/predicting-customer-churn-with-amazon-machine-learning/)
+tries to predict customer churn using a gradient boosting tree approach.
+
+XGBoost uses gradient boosted trees which naturally account for non-linear relationships between features and the target variable, as well as accommodating complex interactions between features.
+
+To note this notebook also makes use of **Neo** to compile the model to run up to twice as fast, with no loss in accuracy, using the `compile()` function.
+
+
+
+
 ### 3. Resources
 - [amazon-sagemaker-examples](https://github.com/awslabs/amazon-sagemaker-examples)
