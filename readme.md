@@ -358,6 +358,12 @@ Amazon SageMaker's Linear Learner actually fits many models in parallel, each wi
 - `wd` or `l1` which control regularization. Regularization can prevent model overfitting by preventing our estimates from becoming too finely tuned to the training data, which can actually hurt generalizability. In this case, we'll leave these parameters as their default "auto" though.
 
 
+#### 2.5 Topic Modeling (NTM)
+This [ntm topic modeling notebook](2-intro-sagemaker-applied-ml/ntm-20newsgroups-topic-model.ipynb) showcase SageMaker Neural Topic Model (NTM) algorithm which is unsupervised.
+NTM is most commonly used to discover a user-specified number of topics shared by documents within a text corpus. Here each observation is a document, the features are the presence (or occurrence count) of each word, and the categories are the topics. Since the method is unsupervised, the topics are not specified upfront and are not guaranteed to align with how a human may naturally categorize documents. The topics are learned as a probability distribution over the words that occur in each document. Each document, in turn, is described as a mixture of topics.
+
+In this notebook, we will use the Amazon SageMaker NTM algorithm to train a model on the [20NewsGroups](https://archive.ics.uci.edu/ml/datasets/Twenty+Newsgroups) data set. This data set has been widely used as a topic modeling benchmark.
+
 
 ### 3. Resources
 - [amazon-sagemaker-examples](https://github.com/awslabs/amazon-sagemaker-examples)
