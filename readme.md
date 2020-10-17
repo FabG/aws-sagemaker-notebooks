@@ -390,6 +390,17 @@ XGBoost uses gradient boosted trees which naturally account for non-linear relat
 To note this notebook also makes use of **Neo** to compile the model to run up to twice as fast, with no loss in accuracy, using the `compile()` function.
 
 
+### 3. SageMaker Endpoints
+
+#### 3.1 A/B Testing
+
+This [notebook](3-sagemaker-endpoints/a-b-testing.ipynb) showcases **A/B testing between a new model and an old model** with production traffic.
+In A/B testing, you test different variants of your models and compare how each variant performs relative to each other. You then choose the best-performing model to replace a previously-existing model new version delivers better performance than the previously-existing version.
+
+Amazon SageMaker enables you to test multiple models or model versions behind the same endpoint using `production_variant()`. Each production variant identifies a machine learning (ML) model and the resources deployed for hosting the model. You can distribute endpoint invocation requests across multiple production variants by providing the traffic distribution for each variant, or you can invoke a specific variant directly for each request.
+
+
+
 
 
 ### 3. Resources
